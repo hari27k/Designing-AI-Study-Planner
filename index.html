@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antigravity | AI Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Sidebar: Input Controls -->
+        <aside class="sidebar">
+            <div class="brand">
+                ANTIGRAVITY <span style="font-weight: 400; opacity: 0.7;">| Planner</span>
+            </div>
+
+            <form id="planner-form">
+                <div class="form-group">
+                    <label for="goal">Current Academic Goal</label>
+                    <input type="text" id="goal" placeholder="e.g. Ace Calculus Midterm" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subjects">Subjects to Cover</label>
+                    <textarea id="subjects" placeholder="e.g. Calculus (Chain Rule), Physics (Kinematics), History Essay" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="hours">Available Hours</label>
+                    <select id="hours">
+                        <option value="2">2 Hours (Light)</option>
+                        <option value="4" selected>4 Hours (Standard)</option>
+                        <option value="6">6 Hours (Intense)</option>
+                        <option value="8">8 Hours (Marathon)</option>
+                    </select>
+                </div>
+
+                <!-- Future: AI Configuration Options -->
+                
+                <button type="submit" id="generate-btn" class="btn">Generate Plan</button>
+            </form>
+        </aside>
+
+        <!-- Main Content: AI Output -->
+        <main class="main-content">
+            <div id="empty-state" class="placeholder">
+                <div style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.2;">⌬</div>
+                <h3>Ready to Plan</h3>
+                <p>Enter your goals and constraints on the left to generate an optimized study strategy.</p>
+            </div>
+
+            <div id="result-content" class="result-container hidden">
+                <!-- AI Output will be injected here -->
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

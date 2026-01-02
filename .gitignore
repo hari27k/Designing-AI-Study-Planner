@@ -1,0 +1,15 @@
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Node (if we add it later)
+node_modules/
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# IDE
+.vscode/
+.idea/
